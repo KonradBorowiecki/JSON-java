@@ -66,3 +66,35 @@ XML.java: XML provides support for converting between JSON and XML.
 JSONML.java: JSONML provides support for converting between JSONML and XML.
 
 XMLTokener.java: XMLTokener extends JSONTokener for parsing XML text.
+
+
+
+[package org.json.strict]
+
+Konrad Borowiecki 
+<konradborowiecki@gmail.com>
+
+Added package 'org.json.strict'.  
+ 
+ROLE: Role of the package is to verify if a String's
+content is of a valid JSON format.
+
+APPLICATION: I use it with JUnit to verify if the format
+of strings returned by my methods is valid JSON. Thus,
+I am certain that when I pass it back to client it will
+work right.
+
+USE: Pass a String as argument to either
+JSONObjectStrict or JSONArrayStrict
+to verify if the String is valid JSON or not. If it is valid
+nothing happends (i.e. object is created without problems);
+Otherwise a JSONException is thrown.
+
+try {
+   //will be OK
+   new JSONObjectStrict("{\"id\":1,\"desc\":\"something\"}");
+   //will fail
+   new JSONObjectStrict("{id:1,\"desc\":\"something\"}");
+} catch (JSONException ex) {
+   System.err.println("Exception ex: "+ex.getMessage());
+}
