@@ -3,7 +3,6 @@ package org.json.strict;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
 /**
  * Extends JSONArray to accept only strictly JSON compatible representation.
@@ -12,7 +11,7 @@ import org.json.JSONTokener;
  * creation of JSON array. Useful if you want to build the JSON String yourself
  * and just check if it comply to JSON format.
  *
- * @author Konrad Borowiecki <kb@geovs.com>
+ * @author Konrad Borowiecki <konradborowiecki@gmail.com>
  */
 public class JSONArrayStrict extends JSONArray {
 

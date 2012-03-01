@@ -13,7 +13,7 @@ import org.json.JSONTokener;
  * creation of JSON object. Useful if you want to build the JSON String yourself
  * and just check if it comply to JSON format.
  *
- * @author Konrad Borowiecki <kb@geovs.com>
+ * @author Konrad Borowiecki <konradborowiecki@gmail.com>
  */
 public class JSONTokenerStrict extends JSONTokener {
 
